@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome Page</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+        overflow: hidden;
+    }
+
+    .stars {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .star {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        background-color: #fff;
+        border-radius: 50%;
+    }
+
+    .galaxy {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        background-color: #fff;
+        border-radius: 50%;
+    }
+    .textt {
+        
+        color:#ffffff;
+        text-align: center;
+    }
+
+    @keyframes twinkle {
+        0% {
+            opacity: 0.2;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0.2;
+        }
+
+    }
+    .cen {
+  margin: auto;
+  width: 60%;
+ 
+  padding: 10px;
+}
+.lef {
+  margin: auto;
+  width: 80%;
+  height: 10%;
+  
+  padding: 195px;
+}
+
+.planets {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .planet {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: radial-gradient(circle at 30% 30%, #ffffff 10%, transparent 70%);
+    }
+
+    .planet::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        /* background-color: #ffcc00 */;
+    }
+
+    .planet:nth-child(1) {
+        top: 20%;
+        left: 10%;
+    }
+
+    .planet:nth-child(2) {
+        top: 70%;
+        left: 50%;
+    }
+
+    .planet:nth-child(3) {
+        top: 40%;
+        left: 80%;
+    }
+    .btn {
+        display: inline-block;
+        padding:100px 80px;
+        background-color: #333333;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        border: 2px solid #333333;
+        transition: background-color 0.3s, color 0.3s;
+
+    }
+
+    .btn:hover {
+        background-color: #0056b3;
+        color: #fff;
+    }
+
+</style>
+</head>  
+<body>
+<div class="planets">
+    <div class="planet"></div>
+    <div class="planet"></div>
+    
+    <div class="planet"></div>
+</div>
+
+<div class="stars">
+    <!-- Generate stars dynamically using JavaScript -->
+</div>
+
+<div class="galaxies">
+    <!-- Generate galaxies dynamically using JavaScript -->
+</div>
+<centre>
+<!-- <div class="cen"> -->
+<div class="textt">
+    <h1>Welcome to Our Website!</h1>
+    <p>Word search game is a puzzle game where players are presented with a grid of letters,
+         and they have to find specific words hidden within that grid. The words can be placed horizontally,
+          vertically, diagonally, and even backward. The objective of the game is to locate all the words 
+          within the grid in the shortest possible time.</p>
+    <p>Feel free to explore our website and <a href="#">contact us</a> if you have any questions.</p>
+</div>
+<!-- </div> --><br/>
+<!-- <div class="lef"> -->
+    <&nbsp><&nbsp><&nbsp><&nbsp><&nbsp><&nbsp><a href="animals.html" class="btn">Animals</a><&nbsp>
+    <a href="food.html" class="btn">Foods</a><&nbsp>
+    <a href="colors.html" class="btn">Colors</a><&nbsp>
+    <br><br><br>
+    <&nbsp><&nbsp><&nbsp><&nbsp><&nbsp><&nbsp><a href="numb.html" class="btn">Numbers</a><&nbsp>
+    <a href="index.html" class="btn">Vehicles</a><&nbsp>
+    <a href="index.html" class="btn">Shapes</a><&nbsp>
+    </div>
+</centre>
+<script>
+    // Generate random stars
+    const starsContainer = document.querySelector('.stars');
+    const numStars = 200;
+    for (let i = 0; i < numStars; i++) {
+        const star = document.createElement('div');
+        star.classList.add('star');
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.top = `${Math.random() * 100}%`;
+        star.style.animation = `twinkle ${(Math.random() * 5) + 1}s linear infinite`;
+        starsContainer.appendChild(star);
+    }
+
+    // Generate random galaxies
+    const galaxiesContainer = document.querySelector('.galaxies');
+    const numGalaxies = 5;
+    for (let i = 0; i < numGalaxies; i++) {
+        const galaxy = document.createElement('div');
+        galaxy.classList.add('galaxy');
+        galaxy.style.left = `${Math.random() * 100}%`;
+        galaxy.style.top = `${Math.random() * 100}%`;
+        galaxiesContainer.appendChild(galaxy);
+    }
+</script>
+
+</body>
+</html>

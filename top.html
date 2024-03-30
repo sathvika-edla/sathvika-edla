@@ -1,0 +1,111 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Puzzle Logo</title>
+<link rel="stylesheet" href="space.css">
+<style>
+    .puzzle-piece {
+        width: 100px;
+        height: 100px;
+        position: relative;
+    }
+
+    .puzzle-piece::before,
+    .puzzle-piece::after {
+        content: "";
+        position: absolute;
+        background: #007bff; /* Change color as needed */
+        border: 2px solid #0056b3; /* Change color as needed */
+    }
+
+    .puzzle-piece::before {
+        width: 50%;
+        height: 50%;
+        top: 0;
+        left: 0;
+        border-radius: 10px 0 0 0;
+        transform: rotate(-45deg);
+        
+        
+    }
+
+    .puzzle-piece::after {
+        width: 50%;
+        height: 50%;
+        bottom: 0;
+        right: 0;
+        border-radius: 0 0 0 10px;
+        transform: rotate(45deg);
+    }
+    .column {
+  float: left;
+  width: 7%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body>
+    
+
+
+<div class="stars">
+    <!-- Generate stars dynamically using JavaScript -->
+</div>
+ 
+<div class="galaxies">
+    <!-- Generate galaxies dynamically using JavaScript -->
+</div>
+<div class="row">
+    <div class="column">
+        <div class="puzzle-piece"></div>
+    </div>
+    <div class="column">
+        <div class="puzzle-piece"></div>
+    </div>
+    <div class="column">
+        <div class="puzzle-piece"></div>
+    </div>
+    <div class="column">
+        <div class="puzzle-piece"></div>
+    </div><div class="column">
+        <div class="puzzle-piece"></div>
+    </div>
+    <div class="column">
+       <h1 style="color:rgb(244, 239, 239);">Puzzle</h1>
+    </div>
+    <div class="column">
+        <h1 style="color:rgb(244, 239, 239);"> Theme</h1>
+     </div>
+     <div class="column">
+        <h1 style="color:rgb(244, 239, 239);"> Hunt</h1>
+     </div>
+
+     <div class="column">
+        <div class="puzzle-piece"></div>
+    </div>
+    <div class="column">
+        <div class="puzzle-piece"></div>
+    </div>
+    <div class="column">
+        <div class="puzzle-piece"></div>
+    </div>
+    <div class="column">
+        <div class="puzzle-piece"></div>
+    </div><div class="column">
+        <div class="puzzle-piece"></div>
+    </div>
+   
+</div>
+<script  src="space.js">
+</script>
+</body>
+</html>
